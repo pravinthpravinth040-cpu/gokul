@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0f19"/>
+      <stop offset="50%" stop-color="#0d1b33"/>
+      <stop offset="100%" stop-color="#070a12"/>
+    </linearGradient>
+    <linearGradient id="bluePurple" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8"/>
+      <stop offset="50%" stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+    <linearGradient id="purpleGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="chartGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#38bdf8" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="chartGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#a855f7" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0"/>
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="12" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="675" fill="url(#bgGrad)"/>
+  
+  <!-- Subtle Grid lines -->
+  <g stroke="rgba(255,255,255,0.04)" stroke-width="1">
+    <line x1="100" y1="0" x2="100" y2="675"/>
+    <line x1="250" y1="0" x2="250" y2="675"/>
+    <line x1="400" y1="0" x2="400" y2="675"/>
+    <line x1="550" y1="0" x2="550" y2="675"/>
+    <line x1="700" y1="0" x2="700" y2="675"/>
+    <line x1="850" y1="0" x2="850" y2="675"/>
+    <line x1="1000" y1="0" x2="1000" y2="675"/>
+    
+    <line x1="0" y1="120" x2="1200" y2="120"/>
+    <line x1="0" y1="240" x2="1200" y2="240"/>
+    <line x1="0" y1="360" x2="1200" y2="360"/>
+    <line x1="0" y1="480" x2="1200" y2="480"/>
+    <line x1="0" y1="600" x2="1200" y2="600"/>
+  </g>
+
+  <!-- Glowing Ambient Blobs -->
+  <circle cx="280" cy="180" r="160" fill="#38bdf8" opacity="0.12" filter="url(#glow)"/>
+  <circle cx="950" cy="400" r="200" fill="#a855f7" opacity="0.1" filter="url(#glow)"/>
+
+  <!-- Glass Dashboard Container -->
+  <rect x="80" y="55" width="1040" height="565" rx="20" fill="rgba(15, 23, 42, 0.75)" stroke="rgba(255, 255, 255, 0.12)" stroke-width="1.5"/>
+
+  <!-- Dashboard Top Bar -->
+  <g>
+    <circle cx="120" cy="95" r="6" fill="#ef4444"/>
+    <circle cx="140" cy="95" r="6" fill="#f59e0b"/>
+    <circle cx="160" cy="95" r="6" fill="#10b981"/>
+    
+    <text x="210" y="100" fill="#f8fafc" font-family="system-ui, sans-serif" font-size="16" font-weight="700" letter-spacing="0.5">BUSINESS DATA ANALYTICS &amp; KPI INTELLIGENCE</text>
+    <rect x="960" y="80" width="130" height="30" rx="8" fill="rgba(56, 189, 248, 0.15)" stroke="rgba(56, 189, 248, 0.4)"/>
+    <text x="980" y="100" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">● LIVE Q3 DATA</text>
+  </g>
+
+  <line x1="80" y1="130" x2="1120" y2="130" stroke="rgba(255, 255, 255, 0.08)"/>
+
+  <!-- Metric Card 1: Revenue Growth -->
+  <rect x="110" y="155" width="220" height="110" rx="14" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="130" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">SALES REVENUE</text>
+  <text x="130" y="222" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">₹42.8 Lakhs</text>
+  <text x="130" y="248" fill="#10b981" font-family="system-ui, sans-serif" font-size="13" font-weight="600">▲ +18.4% YoY Growth</text>
+
+  <!-- Metric Card 2: Operating Margin -->
+  <rect x="355" y="155" width="220" height="110" rx="14" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="375" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">OPERATING MARGIN</text>
+  <text x="375" y="222" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">24.6%</text>
+  <text x="375" y="248" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="600">▲ +3.2% vs Target</text>
+
+  <!-- Metric Card 3: Cost Efficiency -->
+  <rect x="600" y="155" width="220" height="110" rx="14" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="620" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">COST REDUCTION</text>
+  <text x="620" y="222" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">14.2%</text>
+  <text x="620" y="248" fill="#a855f7" font-family="system-ui, sans-serif" font-size="13" font-weight="600">★ Optimized Overhead</text>
+
+  <!-- Metric Card 4: Inventory Turnover -->
+  <rect x="845" y="155" width="245" height="110" rx="14" fill="rgba(30, 41, 59, 0.6)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="865" y="185" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12" font-weight="600">INVENTORY TURNOVER</text>
+  <text x="865" y="222" fill="#ffffff" font-family="system-ui, sans-serif" font-size="26" font-weight="800">6.8x</text>
+  <text x="865" y="248" fill="#38bdf8" font-family="system-ui, sans-serif" font-size="13" font-weight="600">● 42 Days Cycle</text>
+
+  <!-- Main Chart Section: Sales Trend & Predictive Analytics -->
+  <rect x="110" y="285" width="600" height="305" rx="16" fill="rgba(17, 24, 39, 0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="140" y="325" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Monthly Revenue &amp; Forecast Trend</text>
+  <text x="140" y="345" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="12">Data points based on 12-month commercial dataset</text>
+
+  <!-- Area Graph Fill & Lines -->
+  <path d="M 140,530 L 140,480 Q 220,440 280,470 T 420,410 T 540,360 T 670,330 L 670,530 Z" fill="url(#chartGrad1)"/>
+  <path d="M 140,480 Q 220,440 280,470 T 420,410 T 540,360 T 670,330" fill="none" stroke="#38bdf8" stroke-width="3.5"/>
+
+  <!-- Secondary Line (Cost Trend) -->
+  <path d="M 140,530 L 140,500 Q 220,480 280,495 T 420,460 T 540,440 T 670,415 L 670,530 Z" fill="url(#chartGrad2)"/>
+  <path d="M 140,500 Q 220,480 280,495 T 420,460 T 540,440 T 670,415" fill="none" stroke="#a855f7" stroke-width="3" stroke-dasharray="6,4"/>
+
+  <!-- Interactive Data Nodes -->
+  <circle cx="280" cy="470" r="5" fill="#ffffff" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="420" cy="410" r="5" fill="#ffffff" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="540" cy="360" r="5" fill="#ffffff" stroke="#38bdf8" stroke-width="3"/>
+  <circle cx="670" cy="330" r="6" fill="#38bdf8" stroke="#ffffff" stroke-width="2"/>
+
+  <!-- Donut Chart & Category Breakdown -->
+  <rect x="730" y="285" width="360" height="305" rx="16" fill="rgba(17, 24, 39, 0.7)" stroke="rgba(255,255,255,0.08)"/>
+  <text x="760" y="325" fill="#ffffff" font-family="system-ui, sans-serif" font-size="16" font-weight="700">Cost &amp; Profit Distribution</text>
+
+  <!-- Donut Chart -->
+  <g transform="translate(840, 440)">
+    <!-- Outer Rings -->
+    <circle r="70" fill="none" stroke="rgba(255,255,255,0.05)" stroke-width="22"/>
+    <circle r="70" fill="none" stroke="#38bdf8" stroke-width="22" stroke-dasharray="210 230" stroke-dashoffset="0"/>
+    <circle r="70" fill="none" stroke="#a855f7" stroke-width="22" stroke-dasharray="120 320" stroke-dashoffset="-210"/>
+    <circle r="70" fill="none" stroke="#6366f1" stroke-width="22" stroke-dasharray="70 370" stroke-dashoffset="-330"/>
+    <text x="0" y="5" text-anchor="middle" fill="#ffffff" font-family="system-ui, sans-serif" font-size="18" font-weight="800">100%</text>
+    <text x="0" y="22" text-anchor="middle" fill="#94a3b8" font-family="system-ui, sans-serif" font-size="10">REVENUE</text>
+  </g>
+
+  <!-- Donut Legend -->
+  <g transform="translate(945, 385)">
+    <circle cx="10" cy="10" r="5" fill="#38bdf8"/>
+    <text x="25" y="14" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Gross Margin (48%)</text>
+
+    <circle cx="10" cy="40" r="5" fill="#a855f7"/>
+    <text x="25" y="44" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Operating Cost (32%)</text>
+
+    <circle cx="10" cy="70" r="5" fill="#6366f1"/>
+    <text x="25" y="74" fill="#e2e8f0" font-family="system-ui, sans-serif" font-size="12" font-weight="500">Taxes &amp; Misc (20%)</text>
+  </g>
+</svg>

@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume - Gokul Krishan S | B.Com CA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #0f172a;
+      --accent: #2563eb;
+      --text-main: #1e293b;
+      --text-muted: #64748b;
+      --border-color: #e2e8f0;
+      --bg-page: #f8fafc;
+      --card-bg: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+
+    body {
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      padding: 40px 20px;
+      line-height: 1.5;
+    }
+
+    .resume-toolbar {
+      max-width: 850px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #0f172a;
+      color: #fff;
+      padding: 14px 24px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .resume-toolbar .title {
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .resume-toolbar .btn-group {
+      display: flex;
+      gap: 12px;
+    }
+
+    .btn {
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      cursor: pointer;
+      border: none;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      color: #fff;
+    }
+
+    .btn-print:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-back {
+      background: rgba(255,255,255,0.15);
+      color: #fff;
+    }
+
+    .btn-back:hover {
+      background: rgba(255,255,255,0.25);
+    }
+
+    .resume-container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      padding: 50px 60px;
+      border-radius: 16px;
+      box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Resume Header */
+    .resume-header {
+      border-bottom: 2px solid #e2e8f0;
+      padding-bottom: 24px;
+      margin-bottom: 26px;
+    }
+
+    .header-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .name-title h1 {
+      font-family: 'Outfit', sans-serif;
+      font-size: 32px;
+      font-weight: 800;
+      color: #0f172a;
+      letter-spacing: -0.5px;
+    }
+
+    .name-title .subheading {
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--accent);
+      margin-top: 4px;
+    }
+
+    .contact-info {
+      text-align: right;
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.7;
+    }
+
+    .contact-info a {
+      color: var(--text-main);
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .contact-info a:hover {
+      color: var(--accent);
+    }
+
+    /* Section Styles */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      font-family: 'Outfit', sans-serif;
+      font-size: 16px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #0f172a;
+      border-bottom: 1.5px solid #cbd5e1;
+      padding-bottom: 6px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .summary-text {
+      font-size: 14px;
+      color: #334155;
+      line-height: 1.65;
+      text-align: justify;
+    }
+
+    /* Timeline & Items */
+    .item {
+      margin-bottom: 14px;
+    }
+
+    .item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 4px;
+    }
+
+    .item-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .item-subtitle {
+      font-size: 14px;
+      font-weight: 500;
+      color: #475569;
+    }
+
+    .item-meta {
+      font-size: 13px;
+      font-weight: 600;
+      color: #64748b;
+    }
+
+    .item-desc {
+      font-size: 13.5px;
+      color: #334155;
+      line-height: 1.55;
+    }
+
+    .bullet-list {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-top: 6px;
+      font-size: 13.5px;
+      color: #334155;
+    }
+
+    .bullet-list li {
+      margin-bottom: 4px;
+      line-height: 1.5;
+    }
+
+    /* Skills Grid */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .skill-card {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      padding: 10px 14px;
+      border-radius: 8px;
+    }
+
+    .skill-card strong {
+      display: block;
+      font-size: 13px;
+      color: #0f172a;
+      margin-bottom: 4px;
+    }
+
+    .skill-tags {
+      font-size: 12.5px;
+      color: #475569;
+    }
+
+    /* Print styling */
+    @media print {
+      body {
+        padding: 0;
+        background: #fff;
+      }
+      .resume-toolbar {
+        display: none !important;
+      }
+      .resume-container {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+      a {
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-container {
+        padding: 24px;
+      }
+      .header-top {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .contact-info {
+        text-align: left;
+      }
+      .skills-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="resume-toolbar">
+    <div class="title">
+      <span>📄</span>
+      <span>Gokul Krishan S - Professional Resume</span>
+    </div>
+    <div class="btn-group">
+      <button onclick="window.print()" class="btn btn-print">🖨️ Print / Save as PDF</button>
+      <a href="../../index.html" class="btn btn-back">← Back to Portfolio</a>
+    </div>
+  </div>
+
+  <div class="resume-container">
+    <!-- Header -->
+    <header class="resume-header">
+      <div class="header-top">
+        <div style="display: flex; align-items: center; gap: 20px;">
+          <img src="../images/profile.jpg" alt="Gokul Krishan S" style="width: 78px; height: 78px; border-radius: 50%; object-fit: cover; object-position: center 20%; border: 2.5px solid #2563eb; box-shadow: 0 4px 12px rgba(37,99,235,0.18);">
+          <div class="name-title">
+            <h1>Gokul Krishan S</h1>
+            <div class="subheading">Aspiring Accountant | Finance Professional | Business Analyst</div>
+          </div>
+        </div>
+        <div class="contact-info">
+          <div>📍 Coimbatore, Tamil Nadu, India</div>
+          <div>✉️ <a href="mailto:gokulkrishan.s@email.com">gokulkrishan.s@email.com</a></div>
+          <div>📞 <a href="tel:+919876543210">+91 98765 43210</a></div>
+          <div>🔗 <a href="https://linkedin.com/in/gokulkrishans" target="_blank">linkedin.com/in/gokulkrishans</a></div>
+          <div>💻 <a href="https://github.com/gokulkrishans" target="_blank">github.com/gokulkrishans</a></div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Profile -->
+    <section class="section">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="summary-text">
+        Proactive and detail-oriented B.Com CA (Computer Applications) student at VLB Janakiammal College of Arts and Science with a strong foundation in accounting principles, financial management, taxation, and business data analytics. Passionate about leveraging spreadsheet automation, Tally Prime, and analytical methodologies to deliver accurate financial records and strategic business insights. Eager to contribute to a forward-thinking finance or corporate accounting team.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="item">
+        <div class="item-header">
+          <div>
+            <span class="item-title">Bachelor of Commerce with Computer Applications (B.Com CA)</span>
+            <div class="item-subtitle">VLB Janakiammal College of Arts and Science</div>
+          </div>
+          <div class="item-meta">Coimbatore, Tamil Nadu | Current</div>
+        </div>
+        <ul class="bullet-list">
+          <li><strong>Specialization:</strong> Commerce, Accounting and Computer Applications.</li>
+          <li><strong>Core Coursework:</strong> Financial Accounting, Cost Accounting, Corporate Accounting, Business Law, Banking Theory & Practice, Principles of Management, Direct & Indirect Taxes, Database Management Systems, and Office Automation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="section">
+      <h2 class="section-title">Core Competencies &amp; Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <strong>Accounting &amp; Finance</strong>
+          <span class="skill-tags">Accounting Fundamentals, Financial Management, Double-Entry Bookkeeping, Ledger Maintenance, Ratio Analysis, Taxation Basics.</span>
+        </div>
+        <div class="skill-card">
+          <strong>Software &amp; Tools</strong>
+          <span class="skill-tags">Tally Prime (Vouchers, GST Invoicing, Trial Balance), MS Excel (Formulas, Pivot Tables, VLOOKUP/XLOOKUP), MS Word, PowerPoint.</span>
+        </div>
+        <div class="skill-card">
+          <strong>Data &amp; Computer Applications</strong>
+          <span class="skill-tags">Business Data Analysis, Basic Computer Applications, Database Management Concepts, Spreadsheet Financial Modeling.</span>
+        </div>
+        <div class="skill-card">
+          <strong>Professional &amp; Soft Skills</strong>
+          <span class="skill-tags">Communication Skills, Analytical Thinking, Problem Solving, Cross-Functional Teamwork, Detail Orientation, Business Ethics.</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="section">
+      <h2 class="section-title">Academic &amp; Practical Projects</h2>
+      
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Financial Management Analysis</span>
+          <span class="item-meta">Academic Simulation</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Evaluated liquidity, profitability, and solvency ratios for commercial corporate statements.</li>
+          <li>Developed working capital requirements models and cash flow forecasting schedules.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Excel-Based Automated Accounting System</span>
+          <span class="item-meta">Spreadsheet Architecture</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Constructed an automated accounting ledger and trial balance system utilizing advanced Excel functions.</li>
+          <li>Engineered dynamic visualization charts summarizing revenue, expenses, and net profit margins.</li>
+        </ul>
+      </div>
+
+      <div class="item">
+        <div class="item-header">
+          <span class="item-title">Business Data Analysis &amp; Performance Reporting</span>
+          <span class="item-meta">Analytics Case Study</span>
+        </div>
+        <ul class="bullet-list">
+          <li>Analyzed multi-quarter commercial dataset to identify core revenue drivers and seasonal variance.</li>
+          <li>Formulated cost-volume-profit recommendations to optimize operational overheads.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Areas of Interest -->
+    <section class="section">
+      <h2 class="section-title">Areas of Interest</h2>
+      <p class="item-desc">
+        Accounting and Finance • Business Management • Taxation &amp; GST • Financial Analysis &amp; Modeling • Modern Commercial Banking • Business Analytics • Financial Technology
+      </p>
+    </section>
+
+    <!-- Certifications & Achievements -->
+    <section class="section">
+      <h2 class="section-title">Certifications &amp; Achievements (Placeholders)</h2>
+      <ul class="bullet-list">
+        <li><strong>Professional Certification:</strong> Tally Prime Certification &amp; Advanced Excel for Business (In Progress / Specialized Training).</li>
+        <li><strong>Workshops &amp; Seminars:</strong> Participated in College Seminar on Emerging Trends in Corporate Finance &amp; Taxation.</li>
+        <li><strong>College Activities:</strong> Active Participant in Commerce Department Association &amp; Inter-Collegiate Academic Events.</li>
+        <li><strong>Academic Achievements:</strong> Consistent academic standing in core accounting and business subjects.</li>
+      </ul>
+    </section>
+  </div>
+
+</body>
+</html>
